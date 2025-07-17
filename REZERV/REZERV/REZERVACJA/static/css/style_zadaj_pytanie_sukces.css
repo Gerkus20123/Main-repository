@@ -1,0 +1,88 @@
+h1 {
+  color : Orange;
+  text-shadow: 0 0 3px #000000;
+  text-transform: uppercase;
+  font-family: "Trirong", serif;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  color : Orange;
+  text-shadow: 0 0 3px #000000;
+  text-transform: uppercase;
+  font-family: "Trirong", serif;
+  text-align: center;
+  padding: 10px;
+}
+
+h3 {
+  color : Black;
+  text-transform: uppercase;
+  font-family: "Trirong", serif;
+  text-align: Center;
+  padding: 20px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: Orange;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: "Trirong", serif;
+}
+
+nav  {
+  color : black
+  overflow: hidden;
+  background-color: #dddddd;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 26px;
+  text-decoration: none;
+  font-size: 15px
+}
+
+nav a:hover {
+  background-color: gray;
+  color: black;
+    }
+
+img {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5;
+  filter: blur(2px)
+    }
+
+body {
+  background-color: lightgray;
+}

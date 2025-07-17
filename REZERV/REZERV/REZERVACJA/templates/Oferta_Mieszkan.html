@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <script src="https://kit.fontawesome.com/2b66e05a48.js" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title> Oferta mieszkań </title>
+    <link rel="stylesheet" href="{% static 'css/style_oferta_mieszkan.css' %}">
+
+</head>
+<body>
+
+    <!-- Header z obrazem -->
+    <img src="{% static 'images/strona.png' %}" alt="Strona Główna" width="1500" height="220"
+         style="position: absolute; z-index: -1; opacity: 0.5; filter: blur(2px); left-padding: 10px">
+    <h1> Witaj na naszej stronie: Zarezerwuj Sp. z o.o </h1>
+    <h2> Tu znajdziesz obszerną ofertę mieszkań zgodnie ze swoimi oczekiwaniami. </h2>
+
+    <!-- Nawigacja po stronie -->
+    <nav>
+        <a class="fas fa-window-restore" href="{% url 'strona_glowna' %}"> Strona glowna </a>
+        <a class="fas fa-key" href="{% url 'rejestracja' %}"> Rejestracja konta </a>
+        <a class="fas fa-house-user" href="{% url 'lista_mieszkan' %}"> Oferta mieszkan </a>
+        <a class="fas fa-calendar-alt" href="{% url 'rezerwacja' %}"> Rezerwacja mieszkania </a>
+        <a class="fas fa-chalkboard-teacher" href="{% url 'uslugi' %}"> Nasze uslugi </a>
+        <a class="fas fa-edit" href="{% url 'zadaj_pytanie' %}"> Zadaj pytanie </a>
+    </nav>
+
+    <!-- Lewa kolumna 1 -->
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+          <h4> Duże mieszkanie w centrum miasta Zakopanego z widokiem na góry. </h4>
+          <div> <img src="{% static 'images/Apartment 1.png' %}" alt="Nr 1" width="500" height="300"
+                     style="display: block; margin: 0 auto;">  </div>
+          <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px">
+
+              {% for i in Mieszkanie %}
+                {% if i.Nr_mieszkania is 1 %}
+                    <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px"> {{ i.opis }}. Mieszkanie się znajduje w mieście {{ i.miasto }} pod adresem {{ i.adres }}
+                    i jest przeznaczone dla {{ i.liczba_osob }} osób. Ma powierzchnią {{ i.powierzchnia }} metrów kwadratowych. Mieszkanie ma
+                    {{ i.liczba_pokojow }} liczby pokojów. Cena mieszkania wynosi {{ i.cena }} złotych miesięcznie. </p>
+                    <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px"> Numer mieszkania: {{ i.Nr_mieszkania }}</p>
+                    <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px"> Dostępność:
+                       {%if i.dostepnosc is True%}
+                         Dostępne
+                       {%endif%}
+                       {%if i.dostepnosc is False%}
+                         Nie dostępne
+                       {%endif%}
+                    </p>
+                <h5> Data publikowania: {{ i.data_publikowania }} </h5>
+                {%endif%}
+              {% endfor %}
+
+          </p>
+        </div>
+
+    <!-- Lewa kolumna 2 -->
+
+        <div class="card">
+          <h4> Fajne mieszkanie dla rodziny z dziećmi w Zakopanym. </h4>
+          <div> <img src="{% static 'images/Apartment 2.png' %}" alt="Nr 2" width="500" height="300" style="display: block; margin: 0 auto;">  </div>
+          <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px">
+
+                  {% for i in Mieszkanie %}
+                    {% if i.Nr_mieszkania is 2 %}
+                        <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px"> {{ i.opis }}. Mieszkanie się znajduje w mieście {{ i.miasto }} pod adresem {{ i.adres }}
+                        i jest przeznaczone dla {{ i.liczba_osob }} osób. Ma powierzchnią {{ i.powierzchnia }} metrów kwadratowych. Mieszkanie ma
+                        {{ i.liczba_pokojow }} liczby pokojów. Cena mieszkania wynosi {{ i.cena }} złotych miesięcznie. </p>
+                        <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px"> Numer mieszkania: {{ i.Nr_mieszkania }}</p>
+                        <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px"> Dostępność:
+                           {%if i.dostepnosc is True%}
+                             Dostępne
+                           {%endif%}
+                           {%if i.dostepnosc is False%}
+                             Nie dostępne
+                           {%endif%}
+                       </p>
+
+                    <h5> Data publikowania: {{ i.data_publikowania }} </h5>
+                    {%endif%}
+                  {% endfor %}
+          </p>
+        </div>
+
+    <!-- Lewa kolumna 3 -->
+
+        <div class="card">
+          <h4> Mieszkanie w Toruniu. </h4>
+          <div> <img src="{% static 'images/Apartment 3.png' %}" alt="Nr 3" width="500" height="300" style="display: block; margin: 0 auto;">  </div>
+          <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px">
+
+                  {% for i in Mieszkanie %}
+                    {% if i.Nr_mieszkania is 3 %}
+                        <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px"> {{ i.opis }}. Mieszkanie się znajduje w mieście {{ i.miasto }} pod adresem {{ i.adres }}
+                        i jest przeznaczone dla {{ i.liczba_osob }} osób. Ma powierzchnią {{ i.powierzchnia }} metrów kwadratowych. Mieszkanie ma
+                        {{ i.liczba_pokojow }} liczby pokojów. Cena mieszkania wynosi {{ i.cena }} złotych miesięcznie. </p>
+                        <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px"> Numer mieszkania: {{ i.Nr_mieszkania }}</p>
+                        <p style="text-indent: 30px; text-align: justify; padding-left: 30px; padding-right: 30px"> Dostępność:
+                           {%if i.dostepnosc is True%}
+                             Dostępne
+                           {%endif%}
+                           {%if i.dostepnosc is False%}
+                             Nie dostępne
+                           {%endif%}
+                       </p>
+
+                    <h5> Data publikowania: {{ i.data_publikowania }} </h5>
+                    {%endif%}
+                  {% endfor %}
+          </p>
+        </div>
+
+    </div>
+    <!-- Prawa kolumna About Us -->
+
+    <div class="rightcolumn">
+        <div class="card">
+          <h3> O nas: </h3>
+          <div> <img src="{% static 'images/About Us Image.png' %}" alt="About Us Image" width="220" height="150" style="display: block; margin: 0 auto;"> </div>
+          <p style="text-indent: 30px; text-align: justify; padding-left: 15px; padding-right: 15px; font-size: 15px;"> Witamy na naszej stronie – miejscu, gdzie Twoje marzenia o idealnym domu,
+              zyskownej inwestycji czy bezpiecznym wynajmie stają się rzeczywistością! </p>
+          <p style="text-indent: 30px; text-align: justify; padding-left: 15px; padding-right: 15px; font-size: 15px;"> Więcej informacji jest dostępne pod linkiem:  </p>
+              <a class="fas fa-people-arrows" href="{% url 'o_nas' %}" style="padding-left: 85px; color: black; text-decoration: none"> O nas </a>
+        </div>
+
+    <!-- Prawa kolumna Popularne posty -->
+
+        <div class="card">
+          <h3> Posty popularne:  </h3>
+
+          <div> <img src="{% static 'images/nr 3.png' %}" alt="Nr 3" width="220" height="150" style="display: block; margin: 0 auto;"> </div>
+            <p style="text-align: center; padding-left: 15px; padding-right: 15px; font-size: 15px;"> Mieszkanie obok Bałtyku w Sopocie!!! </p>
+
+          <div> <img src="{% static 'images/nr 4.png' %}" alt="Nr 4" width="220" height="150" style="display: block; margin: 0 auto;"> </div>
+            <p style="text-align: center; padding-left: 15px; padding-right: 15px; font-size: 15px;"> Dobre mieszkania dla dwu osób pod klucz. </p>
+
+          <div> <img src="{% static 'images/nr 5.png' %}" alt="Nr 4" width="220" height="150" style="display: block; margin: 0 auto;"> </div>
+            <p style="text-align: center; padding-left: 15px; padding-right: 15px; font-size: 15px;"> Mieszkanie dla dwóch. </p>
+        </div>
+
+    <!-- Prawa kolumna Kontakt -->
+
+        <div class="card">
+          <h3> Kontakt: </h3>
+          <p class="fas fa-mail-bulk" style="font-size: 15px; text-align: center;"> gerkus20123@gmail.com </p>
+          <p class="fas fa-phone" style="font-size: 15px; text-align: center;"> 434119993  </p>
+        </div>
+   </div>
+</div>
+
+<!-- Footer -->
+
+<div class="footer">
+  <p> All Rights Reserved. 2025. Częstochowa. </p>
+</div>
+
+</body>
+</html>
