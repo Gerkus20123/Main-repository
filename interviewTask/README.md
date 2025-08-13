@@ -1,4 +1,4 @@
-
+![Zrzut ekranu aplikacji](https://raw.githubusercontent.com/Gerkus20123/Main-repository/56cbf032aca275c7253c0a29d9f755c67f9b738c/Aplikacja.png)
 ------------------------------------------------------- OPIS -----------------------------------------------------------------
 
 To jest aplikacja webowa typu CRUD (Create, Read, Update, Delete) do zarządzania wiadomościami przez użytkownika za pomocą formularza. Formularz posiada funkcjionalność taką jak dodawanie, edytiwanie oraz usuwanie wiadomości. Kolumna "ID" reprezentuje ID wiadomości w bazie danych (na razie nie zaimplementowane jest numer wiadomości bo chyba tak było by wygodnie dla użytkownika niż po prostu ID), kolumna "Wiadomości" reprezentuje tekst przekazany przez użytkownika do bazy danych, kolumna "Akcje" reprezentuje narzędzia do zarządzania wiadomościami tj. edytuj i usuń. 
@@ -56,3 +56,4 @@ II. FRONTEND
 6. frontend/app/globals.css style co do interfejsu ShadCN UI
 7. frontend/components/ui komponenty co do interfejsu ShadCN UI (button, input, textarea, table, dialog, card).
 8. frontend się uruchumia w PS C:\Users\"User_name"\Desktop\interviewTask\frontend> za pomocą komendy npm run dev (używałem Visual Studio Code gdzie uruchumiałem frontend)
+
