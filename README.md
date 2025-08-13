@@ -1,4 +1,4 @@
-
+Aplikacja.png
 ------------------------------------------------------- OPIS -----------------------------------------------------------------
 
 To jest aplikacja webowa typu CRUD (Create, Read, Update, Delete) do zarządzania wiadomościami przez użytkownika za pomocą formularza. Formularz posiada funkcjionalność taką jak dodawanie, edytiwanie oraz usuwanie wiadomości. Kolumna "ID" reprezentuje ID wiadomości w bazie danych (na razie nie zaimplementowane jest numer wiadomości bo chyba tak było by wygodnie dla użytkownika niż po prostu ID), kolumna "Wiadomości" reprezentuje tekst przekazany przez użytkownika do bazy danych, kolumna "Akcje" reprezentuje narzędzia do zarządzania wiadomościami tj. edytuj i usuń. 
