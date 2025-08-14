@@ -11,6 +11,15 @@ w momencie otrzymania komunikatu.
 7) tak samo co do "Gold", ale praca nad tym idze 
 
 
+Preview aplikacji:
+
+![Zrzut ekranu aplikacji_1](1_RPG.png)
+
+![Zrzut ekranu aplikacji_1](2_RPG.png)
+
+![Zrzut ekranu aplikacji_1](3_RPG.png)
+
+
 ----------------------------------------------| RPG game (Nighty Nights) |----------------------------------------------
 
 ---------------------------------------------------------OPIS-GRY-------------------------------------------------------
